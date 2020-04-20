@@ -1,0 +1,24 @@
+IVP are solved using gsl_odeiv2_step_appl whose API is 
+
+int gsl_odeiv2_step_apply(gsl_odeiv2_step * s, double t, double h, double y[], double yerr[], const double dydt_in[], double dydt_out[], const gsl_odeiv2_system * sys)
+
+Algorith is specified as the first argument gsl_odeiv2_step_type
+available aglorithms are
+
+1)gsl_odeiv2_step_rk4
+Explicit 4th order (classical) Runge-Kutta
+
+int gsl_odeiv2_step_apply(gsl_odeiv2_step_rk4 * s, double t, double h, double y[], double yerr[], const double dydt_in[], double dydt_out[], const gsl_odeiv2_system * sys)
+
+2)gsl_odeiv2_step_rkf45
+Explicit embedded Runge-Kutta-Fehlberg (4, 5) method.
+
+int gsl_odeiv2_step_apply(gsl_odeiv2_step_rkf45 * s, double t, double h, double y[], double yerr[], const double dydt_in[], double dydt_out[], const gsl_odeiv2_system * sys)
+
+
+3)gsl_odeiv2_step_bsimp
+Implicit Bulirsch-Stoer method of Bader and Deuflhard
+
+
+int gsl_odeiv2_step_apply(gsl_odeiv2_step_bsimp * s, double t, double h, double y[], double yerr[], const double dydt_in[], double dydt_out[], const gsl_odeiv2_system * sys)
+
