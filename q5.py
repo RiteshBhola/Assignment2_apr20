@@ -20,7 +20,7 @@ t1=10
 t2=20
 z1=0
 z2=0
-
+#Obtaining the solution at two initial guesses t1 and t2 then following secant method for increment the guess
 z[0]=t1
 
 for i in range(0,n-1,1):
